@@ -12,14 +12,14 @@ app.get("/hello", (req, res) => {
 // query parameter
 app.get("/user", (req, res) => {
     data = req.query
-    res.send(data)
+    res.json(data)
 })
 //path parameter
 app.post("/user/:fname/:lname", (req, res) => {
     data = req.params
     let firstName = req.params.fname
     let lastName = req.params.lname
-    res.send(data)
+    res.json(data)
 })
 
 app.listen(SERVER_PORT, () => {
